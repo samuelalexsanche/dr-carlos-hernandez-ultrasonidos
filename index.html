@@ -58,6 +58,12 @@ setTimeout(function(){
 <!-- ═══════════════════════════════════════════════════════════════
      DATOS ESTRUCTURADOS — SEO local + GEO (motores generativos)
      ═══════════════════════════════════════════════════════════════ -->
+<!-- PENDIENTE del cliente para completar este bloque:
+     · consultorio: email, hasMap (URL de Google Maps) y sameAs (Facebook, Instagram,
+       perfil de Google Business). Se omiten en lugar de dejarlos con texto de relleno
+       porque schema.org los tipa como email/URL y un valor inválido cuenta como error.
+     · médico: address (cuando haya dirección) e image (cuando entregue su foto real).
+     · verificar geo.latitude/longitude: hoy traen el centro de Guadalajara. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -118,20 +124,18 @@ setTimeout(function(){
         { "@type": "MedicalTest", "name": "Ultrasonido Doppler carotídeo" },
         { "@type": "MedicalTest", "name": "Ultrasonido musculoesquelético" }
       ],
-      "medicalSpecialty": "Radiology",
-      "employee": { "@id": "https://samuelalexsanche.github.io/dr-carlos-hernandez-ultrasonidos/#medico" },
-      "_PENDIENTE_CLIENTE": "Faltan del cliente: email, hasMap (URL de Google Maps) y sameAs (Facebook, Instagram, perfil de Google Business). Se omiten en vez de dejarlos con texto de relleno porque schema.org exige URL/email y un valor inválido cuenta como error."
+      "medicalSpecialty": "Radiography",
+      "employee": { "@id": "https://samuelalexsanche.github.io/dr-carlos-hernandez-ultrasonidos/#medico" }
     },
     {
-      "@type": "Physician",
+      "@type": ["Person", "Physician"],
       "@id": "https://samuelalexsanche.github.io/dr-carlos-hernandez-ultrasonidos/#medico",
       "name": "Dr. Carlos Hernández",
       "jobTitle": "Médico Radiólogo",
-      "medicalSpecialty": "Radiology",
+      "medicalSpecialty": "Radiography",
       "telephone": "+523313182911",
       "priceRange": "$800 - $1500 MXN",
       "worksFor": { "@id": "https://samuelalexsanche.github.io/dr-carlos-hernandez-ultrasonidos/#consultorio" },
-      "_PENDIENTE_CLIENTE": "Google recomienda además address e image en este nodo: address sale cuando el doctor dé la dirección, image cuando entregue su fotografía real.",
       "areaServed": "Guadalajara, Jalisco, México",
       "knowsLanguage": "es-MX"
     },
