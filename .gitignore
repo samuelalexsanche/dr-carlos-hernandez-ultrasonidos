@@ -1,0 +1,7 @@
+.DS_Store
+.claude/
+
+# Notas internas de Mattera: el repo es público y estos documentos hablan de
+# datos pendientes del cliente y de quién redactó los textos de preparación.
+HANDOFF-CLAUDE-CODE.md
+PROMPT-CLAUDE-CODE.md
