@@ -44,7 +44,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- La hoja de Google Fonts bloqueaba el render ~900 ms y retrasaba el LCP del héroe.
      Se carga asíncrona; la tipografía y el display=swap no cambian. -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all';this.onload=null">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -283,6 +282,10 @@ setTimeout(function(){
 <section class="hero" id="inicio">
   <!-- PLACEHOLDER IMG #1 -->
   <img class="hero__bg" src="assets/img/hero-scanroom.webp" alt="" role="presentation"
+       srcset="assets/img/hero-scanroom-1200.webp 1200w,
+               assets/img/hero-scanroom-1800.webp 1800w,
+               assets/img/hero-scanroom.webp 2400w"
+       sizes="100vw"
        width="2400" height="1600" fetchpriority="high"
        data-placeholder="hero-scanroom"
        data-kie-prompt="Dimly lit private ultrasound examination room at night, shallow depth of field, an ultrasound console glowing softly, curvilinear transducer probe resting in its holder, warm amber and deep wine-red ambient light, dark plum-black shadows, cinematic, no people, no text, no logos, photographic, 35mm, soft bokeh, 3:2">
